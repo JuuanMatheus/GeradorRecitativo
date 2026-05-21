@@ -4,44 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    
+ 
     <title>Recitativos</title>
 </head>
 <body>
     <h1>Recitativos</h1>
+    <div class="icone">
+        <div class="linha"></div>
+            <i data-lucide="book-open"></i>
+        <div class="linha"></div>
+    </div>
     <form>
-        <div>
-            <label for="nome">NOME:</label>
-            <input type="text" id="nome">
-        </div> 
-        <div>
-            <label for="livro">LIVRO:</label>
-            <input type="text" id="livro">      
+        <div class="form-conteudo">
+            <div>
+                <i data-lucide="user"></i>
+                <label for="nome">NOME:</label>
+                <input type="text" id="nome">
+            </div> 
+            <div>
+                <i data-lucide="book-text"></i>
+                <label for="livro">LIVRO:</label>
+                <input type="text" id="livro">      
+            </div>
+            <div>   
+                <i data-lucide="bookmark"></i>
+                <label for="capitulo">CAPÍTULO:</label>
+                <input type="number" id="capitulo">
+            </div>
+            <div>
+                <i data-lucide="form"></i>
+                <label for="versoInicial">VERSOS:</label>
+                <input type="number" id="versoInicial">
+                <label for="versoFinal">AO</label>
+                <input type="number" id="versoFinal">
+            </div>
+            <div>
+                <i data-lucide="users"></i>
+                <label for="continuacao">APÓS:</label>
+                <input type="text" id="continuacao">
+            </div>
+            <div>
+                <i data-lucide="calendar-days"></i>
+                <label for="dataRecitativo">RECITATIVO PARA O DIA:</label> 
+                <input type="text" class="data" placeholder="DD/MM/AAAA" maxlength="10" id="dataRecitativo">
+            </div>
+            <div>
+                <i data-lucide="user-round-pen"></i>
+                <label for="nomeAuxiliar">AUXILIAR:</label>
+                <input type="text" id="nomeAuxiliar">
+            </div>            
         </div>
-        <div>   
-            <label for="capitulo">CAPÍTULO:</label>
-            <input type="number" id="capitulo">
-        </div>
-        <div>
-            <label for="versoInicial">VERSOS:</label>
-            <input type="number" id="versoInicial">
-            <label for="versoFinal">AO</label>
-            <input type="number" id="versoFinal">
-        </div>
-        <div>
-            <label for="continuacao">APÓS:</label>
-            <input type="text" id="continuacao">
-        </div>
-        <div>
-            <label for="dataRecitativo">RECITATIVO PARA O DIA:</label> 
-            <input type="text" class="data" placeholder="DD/MM/AAAA" maxlength="10" id="dataRecitativo">
-        </div>
-        <div>
-            <label for="nomeAuxiliar">AUXILIAR:</label>
-            <input type="text" id="nomeAuxiliar">
-        </div>
-        <button type="submit">Gerar Recitativo</button>  
+        <button type="submit">
+            <i data-lucide="file-text"></i>
+            Gerar Recitativo
+        </button>
     </form> 
+    <script src="https://unpkg.com/lucide@latest"></script>   
     <script src="js/script.js"></script>
     <script src="js/mask.js"></script> 
 </body>
