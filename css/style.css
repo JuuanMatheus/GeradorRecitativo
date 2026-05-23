@@ -1,20 +1,58 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-h1 {
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10px;
-    color: #2d3748;
+/* ===== BODY ===== */
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Inter", sans-serif;
+
+    background-color: #e5e5e5;
 }
+
+/* ===== TÍTULO ===== */
+
+h1 {
+    margin-bottom: 10px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #2d3748;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ÍCONE SUPERIOR ===== */
 
 .icone {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 10px;
+}
+
+.icone svg {
+    width: 36px !important;
+    height: 36px !important;
+
+    padding: 6px;
+
+    border-radius: 50%;
+
+    color: rgb(95, 160, 240);
+    background-color: rgba(95, 160, 240, 0.12);
 }
 
 .linha {
@@ -24,86 +62,149 @@ h1 {
     background-color: rgb(95, 160, 240);
 }
 
-body {
-    padding: 20px;
-
-    font-family: "Inter", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #e5e5e5;
-    min-height: 100vh;
-}
+/* ===== FORMULÁRIO ===== */
 
 form {
-    border: 1px solid #d6d6d6;
+    width: 100%;
+    max-width: 560px;
+
     padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
 
     display: flex;
     flex-direction: column;
 
-    width: 100%;
-    max-width: 500px;
+    border: 1px solid #d6d6d6;
+    border-radius: 16px;
+
+    background-color: #ffffff;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-form div {
-    margin-bottom: 5px;
-}
-
 .form-conteudo {
-    border-left: 3px solid rgb(95, 160, 240);
-    padding-left: 20px;
     margin-bottom: 20px;
+    padding-left: 20px;
+
+    border-left: 3px solid rgb(95, 160, 240);
 }
+
+.form-conteudo > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 16px;
+}
+
+.form-conteudo svg {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    color: rgb(95, 160, 240);
+}
+
+/* ===== LABELS ===== */
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #4a5568;
+}
+
+/* ===== INPUTS ===== */
 
 input {
-    padding: 2px;
-    border-radius: 5px;
+    width: 100%;
+
+    padding: 6px 12px;
+
     border: 1px solid #999;
-    margin-top: 3px;
+    border-radius: 5px;
 
     font-size: 15px;
 
     transition: 0.2s;
 }
 
+input::placeholder {
+    color: #a0aec0;
+
+    font-size: 14px;
+
+    font-weight: 400;
+}
+
 input:focus {
     outline: none;
+
     border-color: rgb(95, 160, 240);
-    box-shadow:  0 0 0 3px rgba(95, 160, 240, 0.2);
+
+    box-shadow: 0 0 0 3px rgba(95, 160, 240, 0.2);
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     appearance: none;
-
     margin: 0;
 }
 
+/* ===== VERSOS ===== */
+
+.versos-container {
+    display: flex;
+    gap: 10px;
+}
+
+.versos-container label {
+    flex: none;
+}
+
+.versos-container input {
+    width: calc(50% - 5px);
+}
+
+/* ===== BOTÃO ===== */
+
 form button {
+    width: fit-content;
+
     align-self: flex-end;
 }
 
 button {
+    padding: 12px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     border: none;
     border-radius: 8px;
-    padding: 12px 18px;
-    color: rgb(0, 0, 0);
+
+    background-color: rgb(95, 160, 240);
+    color: white;
+
     font-weight: 600;
+
     cursor: pointer;
+
+    box-shadow: 0 2px 6px rgba(95, 160, 240, 0.25);
+
     transition: 0.2s;
 }
 
 button:hover {
-    background-color: rgb(255, 255, 255);
-    transform: translateY(-1px);
+    background-color: rgb(75, 140, 220);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 10px rgba(95, 160, 240, 0.3);
 }
+
+/* ===== RESPONSIVO ===== */
 
 @media (max-width: 600px) {
 
@@ -114,5 +215,4 @@ button:hover {
     form {
         padding: 15px;
     }
-
 }
