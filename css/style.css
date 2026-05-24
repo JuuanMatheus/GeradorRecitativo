@@ -1,3 +1,5 @@
+/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +34,7 @@ h1 {
     letter-spacing: 1px;
 
     color: #2d3748;
+
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
@@ -76,7 +79,7 @@ form {
     border: 1px solid #d6d6d6;
     border-radius: 16px;
 
-    background-color: #ffffff;
+    background-color: #fff;
 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -118,7 +121,6 @@ label {
 
 input {
     width: 100%;
-
     padding: 6px 12px;
 
     border: 1px solid #999;
@@ -130,11 +132,10 @@ input {
 }
 
 input::placeholder {
-    color: #a0aec0;
-
     font-size: 14px;
-
     font-weight: 400;
+
+    color: #a0aec0;
 }
 
 input:focus {
@@ -185,7 +186,7 @@ button {
     border-radius: 8px;
 
     background-color: rgb(95, 160, 240);
-    color: white;
+    color: #fff;
 
     font-weight: 600;
 
@@ -202,6 +203,155 @@ button:hover {
     transform: translateY(-2px);
 
     box-shadow: 0 4px 10px rgba(95, 160, 240, 0.3);
+}
+
+/* ===== PAPELETA ===== */
+
+.papeleta {
+    width: 9cm;
+    min-height: 6cm;
+
+    margin-top: 20px;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    border: 1px solid #000;
+
+    background-color: #fff;
+
+    font-size: 12px;
+}
+
+/* ===== TÍTULO ===== */
+
+.papeleta h3 {
+    margin-bottom: 6px;
+
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 1.3;
+
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+/* ===== CAMPOS ===== */
+
+.campo-papeleta,
+.campo-inline,
+.campo-data {
+    display: flex;
+    align-items: flex-end;
+
+    font-size: 12px;
+}
+
+.campo-papeleta,
+.campo-inline {
+    gap: 4px;
+}
+
+.campo-data {
+    gap: 3px;
+}
+
+.titulo-campo {
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+/* ===== LINHAS ===== */
+
+.linha-grande,
+.linha-capitulo,
+.linha-verso-maior,
+.linha-verso-menor,
+.linha-dia,
+.linha-mes,
+.linha-ano {
+    display: flex;
+    align-items: center;
+
+    height: 12px;
+
+    padding-left: 2px;
+
+    border-bottom: 1px solid #000;
+}
+
+.linha-grande {
+    flex: 1;
+}
+
+.linha-capitulo {
+    width: 2cm;
+}
+
+.linha-verso-maior {
+    width: 1.2cm;
+}
+
+.linha-verso-menor {
+    width: 1cm;
+}
+
+.linha-dia,
+.linha-mes {
+    width: 2.4cm;
+}
+
+.linha-ano {
+    width: 1.5cm;
+}
+
+/* ===== CAPÍTULO E VERSOS ===== */
+
+.linha-versiculos {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+/* ===== DATA ===== */
+
+.barra-data {
+    line-height: 1;
+}
+
+/* ===== IMPRESSÃO ===== */
+
+@media print {
+
+    body {
+        background: white;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    h1,
+    .icone,
+    form,
+    button {
+        display: none;
+    }
+
+    .papeleta {
+        margin: 0;
+
+        box-shadow: none;
+
+        page-break-inside: avoid;
+    }
+}
+
+.papeleta-export {
+    width: 380px;
 }
 
 /* ===== RESPONSIVO ===== */

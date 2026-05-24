@@ -19,7 +19,7 @@
             <div>
                 <i data-lucide="user"></i>
                 <label for="nome">NOME:</label>
-                <input type="text" id="nome" placeholder="Digite o nome">
+                <input type="text" id="nome" placeholder="Digite o Nome">
             </div> 
             <div>
                 <i data-lucide="book-text"></i>
@@ -34,14 +34,14 @@
             <div class="versos-container">
                 <i data-lucide="form"></i>
                 <label for="versoInicial">VERSOS:</label>
-                <input type="number" id="versoInicial" placeholder="Verso inicial">
+                <input type="number" id="versoInicial" placeholder="Verso Inicial">
                 <label for="versoFinal">AO</label>
-                <input type="number" id="versoFinal" placeholder="Verso final">
+                <input type="number" id="versoFinal" placeholder="Verso Final">
             </div>
             <div>
                 <i data-lucide="users"></i>
                 <label for="continuacao">APÓS:</label>
-                <input type="text" id="continuacao" placeholder="Nome do irmão(a) anterior">
+                <input type="text" id="continuacao" placeholder="Nome do Irmão(a) Anterior">
             </div>
             <div>
                 <i data-lucide="calendar-days"></i>
@@ -51,7 +51,7 @@
             <div>
                 <i data-lucide="user-round-pen"></i>
                 <label for="nomeAuxiliar">AUXILIAR:</label>
-                <input type="text" id="nomeAuxiliar" placeholder="Digite o nome do(a) auxiliar">
+                <input type="text" id="nomeAuxiliar" placeholder="Digite o Nome do(a) Auxiliar">
             </div>            
         </div>
         <button type="submit">
@@ -59,7 +59,12 @@
             Gerar Recitativo
         </button>
     </form> 
-    <script src="https://unpkg.com/lucide@latest"></script>   
+    <button type="button" onclick="baixarImagem()">
+        Baixar Imagem
+    </button>
+    <div id="resultado-recitativo"></div>
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>  
     <script src="js/script.js"></script>
     <script src="js/mask.js"></script> 
 </body>
