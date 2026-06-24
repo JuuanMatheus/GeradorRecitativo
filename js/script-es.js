@@ -160,5 +160,5 @@ function paginaPortugues() {
 }
 
 function paginaEspanhol() {
-    window.location.href = "./GeradorRecitativo/es/index.html";
+    window.location.href = "../GeradorRecitativo/es/index.html";
 }
