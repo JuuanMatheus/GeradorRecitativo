@@ -155,10 +155,6 @@ function baixarImagem() {
     });
 }
 
-function paginaPortugues() {
-    window.location.href = "index.html";
-}
-
 function paginaEspanhol() {
     window.location.href = "../GeradorRecitativo/es/index.html";
 }
