@@ -10,6 +10,8 @@ function gerarRecitativo(event) {
     const dados = pegarDadosFormulario();
 
     const resultado = document.getElementById("resultado-recitativo");
+    
+    document.getElementById("btnBaixar").style.display = "block";
 
     resultado.innerHTML = `
         <div class="papeleta papeleta-es">
@@ -154,9 +156,9 @@ function baixarImagem() {
 }
 
 function paginaPortugues() {
-    window.location.href = "../pt-br/index.html";
+    window.location.href = "../index.html";
 }
 
 function paginaEspanhol() {
-    window.location.href = "../es/index.html";
+    window.location.href = "./index.html";
 }
