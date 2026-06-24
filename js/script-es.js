@@ -156,9 +156,9 @@ function baixarImagem() {
 }
 
 function paginaPortugues() {
-    window.location.href = "/";
+    window.location.href = "/index.html";
 }
 
 function paginaEspanhol() {
-    window.location.href = "/es/";
+    window.location.href = "/es/index.html";
 }
