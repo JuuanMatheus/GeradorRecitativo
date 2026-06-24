@@ -156,7 +156,7 @@ function baixarImagem() {
 }
 
 function paginaPortugues() {
-    window.location.href = "/index.html";
+    window.location.href = "/";
 }
 
 function paginaEspanhol() {
