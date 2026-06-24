@@ -156,7 +156,7 @@ function baixarImagem() {
 }
 
 function paginaPortugues() {
-    window.location.href = "./GeradorRecitativo/";
+    window.location.href = "../GeradorRecitativo/";
 }
 
 function paginaEspanhol() {
