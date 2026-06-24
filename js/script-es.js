@@ -12,19 +12,19 @@ function gerarRecitativo(event) {
     const resultado = document.getElementById("resultado-recitativo");
 
     resultado.innerHTML = `
-        <div class="papeleta">
+        <div class="papeleta papeleta-es">
 
-            <h3>CONGREGAÇÃO CRISTÃ NO BRASIL</h3>
+            <h3>CONGREGACIÓN CRISTIANA EN BRASIL</h3>
 
             <p class="campo-papeleta">
-                <span class="titulo-campo">NOME:</span>
+                <span class="titulo-campo">NOMBRE:</span>
                 <span class="linha-grande">
                     ${dados.nome}
                 </span>
             </p>
 
             <p class="campo-papeleta">
-                <span class="titulo-campo">LIVRO:</span>
+                <span class="titulo-campo">LIBRO:</span>
                 <span class="linha-grande">
                     ${dados.livro}
                 </span>
@@ -41,13 +41,13 @@ function gerarRecitativo(event) {
                 </div>
 
                 <div class="campo-inline">
-                    <span class="titulo-campo">VERSOS:</span>
+                    <span class="titulo-campo">VERSÍCULOS:</span>
 
                     <span class="linha-verso-maior">
                         ${dados.versoInicial}
                     </span>
 
-                    <span>ao</span>
+                    <span>al</span>
 
                     <span class="linha-verso-menor">
                         ${dados.versoFinal}
@@ -57,7 +57,7 @@ function gerarRecitativo(event) {
             </div>
 
             <p class="campo-papeleta">
-                <span class="titulo-campo">APÓS:</span>
+                <span class="titulo-campo">DESPUÉS DE:</span>
 
                 <span class="linha-grande">
                     ${dados.continuacao}
@@ -67,7 +67,7 @@ function gerarRecitativo(event) {
             <div class="campo-data">
 
                 <span class="titulo-campo">
-                    RECITATIVO PARA O DIA:
+                    RECITATIVO PARA EL DÍA:
                 </span>
 
                 <span class="linha-dia">
@@ -151,4 +151,12 @@ function baixarImagem() {
 
         link.click();
     });
+}
+
+function paginaPortugues() {
+    window.location.href = "../pt-br/index.html";
+}
+
+function paginaEspanhol() {
+    window.location.href = "../es/index.html";
 }

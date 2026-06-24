@@ -300,6 +300,14 @@ button:hover {
     width: 1cm;
 }
 
+.papeleta-es .linha-verso-maior {
+    width: 0.8cm;
+}
+
+.papeleta-es .linha-verso-menor {
+    width: 0.8cm;
+}
+
 .linha-dia,
 .linha-mes {
     width: 2.4cm;
@@ -314,15 +322,42 @@ button:hover {
 .linha-versiculos {
     display: flex;
     align-items: flex-end;
-    gap: 6px;
+    justify-content: space-between;
+    gap: 4px;
 }
-
 /* ===== DATA ===== */
 
 .barra-data {
     line-height: 1;
 }
 
+.idiomas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.idioma {
+    border: 1px solid #5ca9ff;
+    background: white;
+    color: #5ca9ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.idioma:hover {
+    background: #eef6ff;
+}
+
+.idioma.ativo {
+    background: #5ca9ff;
+    color: white;
+}
 /* ===== IMPRESSÃO ===== */
 
 @media print {

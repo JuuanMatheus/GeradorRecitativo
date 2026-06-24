@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+ 
+    <title>Recitativos</title>
+</head>
+<body>
+    <h1>Recitativos</h1>
+    <div class="icone">
+        <div class="linha"></div>
+            <i data-lucide="book-open"></i>
+        <div class="linha"></div>
+    </div>
+    <div class="idiomas">
+        <button class="idioma" onclick="paginaPortugues()">
+            PT-BR
+        </button>
+
+        <button class="idioma ativo" onclick="paginaEspanhol()">
+            ES
+        </button>
+    </div>
+    <form>
+        <div class="form-conteudo">
+            <div>
+                <i data-lucide="user"></i>
+                <label for="nome">NOMBRE:</label>
+                <input type="text" id="nome" placeholder="Ingrese el Nombre">
+            </div> 
+            <div>
+                <i data-lucide="book-text"></i>
+                <label for="livro">LIBRO:</label>
+                <input type="text" id="livro" placeholder="Ej.: Salmos">    
+            </div>
+            <div>   
+                <i data-lucide="bookmark"></i>
+                <label for="capitulo">CAPÍTULO:</label>
+                <input type="number" id="capitulo" placeholder="Ej.: 23">
+            </div>
+            <div class="versos-container">
+                <i data-lucide="form"></i>
+                <label for="versoInicial">VERSÍCULOS:</label>
+                <input type="number" id="versoInicial" placeholder="Versículo Inicial">
+                <label for="versoFinal">AL</label>
+                <input type="number" id="versoFinal" placeholder="Versículo Final">
+            </div>
+            <div>
+                <i data-lucide="users"></i>
+                <label for="continuacao">DESPUÉS DE:</label>
+                <input type="text" id="continuacao" placeholder="Nombre del Hermano(a) Anterior">
+            </div>
+            <div>
+                <i data-lucide="calendar-days"></i>
+                <label for="dataRecitativo">RECITATIVO PARA EL DÍA:</label> 
+                <input type="text" class="data" placeholder="DD/MM/AAAA" maxlength="10" id="dataRecitativo">
+            </div>
+            <div>
+                <i data-lucide="user-round-pen"></i>
+                <label for="nomeAuxiliar">AUXILIAR:</label>
+                <input type="text" id="nomeAuxiliar" placeholder="Ingrese el Nombre del Auxiliar">
+            </div>            
+        </div>
+        <button type="submit">
+            <i data-lucide="file-text"></i>
+            Generar Recitativo
+        </button>
+    </form> 
+    <button type="button" onclick="baixarImagem()" id="btnBaixar" style="display: none;">
+        Descargar Imagen
+    </button>
+    <div id="resultado-recitativo"></div>
+    <script src="https://unpkg.com/lucide@latest"></script> 
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>  
+    <script src="../js/script-es.js"></script>
+    <script src="../js/mask.js"></script> 
+</body>
+</html>
